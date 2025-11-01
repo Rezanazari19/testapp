@@ -54,33 +54,29 @@
     <iframe id="gameFrame" src=""></iframe>
   </div>
 
+
+
   <script>
     // Generate or retrieve user ID
     function getUserId() {
-      let userId = localStorage.getItem('mafiaGameUserId');
-      
-      if (!userId) {
-        // Generate new unique user ID
-        userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-        localStorage.setItem('mafiaGameUserId', userId);
-      }
-      
-      return userId;
+        let userId = localStorage.getItem('mafiaGameUserId');
+        
+        if (!userId) {
+            userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            localStorage.setItem('mafiaGameUserId', userId);
+        }
+        
+        return userId;
     }
     
-    // Initialize iframe dynamically
-    (function() {
-      const userId = getUserId();
-      const baseUrl = 'https://script.google.com/macros/s/AKfycbwgMVf6b-sFWrugXYNcZC96vHlIFjf0KQWdd2spIRuiloMMz6feQppVoEGQ4Mg85ndT/exec'; // your Apps Script URL
-      const fixedUsername = 'RezaNazari'; // fixed username
-      
-      // Append both usernames to URL
-      const iframe = document.getElementById('gameFrame');
-      iframe.src = `${baseUrl}?username=${encodeURIComponent(fixedUsername)}&userId=${encodeURIComponent(userId)}`;
-      
-      console.log('User ID:', userId); // For debugging
-    })();
-  </script>
+    const userId = getUserId();
+    const baseUrl = 'https://script.google.com/macros/s/AKfycbwgMVf6b-sFWrugXYNcZC96vHlIFjf0KQWdd2spIRuiloMMz6feQppVoEGQ4Mg85ndT/exec';
+    
+    // ✅ Use 'name' for authentication, 'userId' for saves
+    document.getElementById('gameFrame').src = `${baseUrl}?name=RezaNazari&userId=${userId}`;
+    
+    console.log('User ID:', userId);
+</script>
 
 </body>
 </html>
