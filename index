@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Godfathers</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- iOS & Android Support -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#243a4f" />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #243a4f;
+      overflow: hidden; /* 🔥 Prevents scrollbar */
+    }
+
+    .app-container {
+      position: fixed;
+      top: env(safe-area-inset-top);
+      right: env(safe-area-inset-right);
+      bottom: env(safe-area-inset-bottom);
+      left: env(safe-area-inset-left);
+      background-color: #243a4f;
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 95vh;
+      border: none;
+      display: block;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <iframe src="https://script.google.com/macros/s/AKfycbxQE3rkNjFNysF7vLvShFwOsvHOcug4Y0V9ICsmhKV8-PKeFj9_VGj2kDIjzDRGZdy2/exec?name=RezaNazari"></iframe>
+  </div>
+
+
+  
+</body>
+</html>
